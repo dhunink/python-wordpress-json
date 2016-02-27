@@ -96,6 +96,14 @@ Usage
     # only one of title, content and excerpt is required to create a post
     new_post = wp.create_post(data=data)
     print json.dumps(new_post);
+    
+    # create a new post with a custom post type (e.g. myposttype)
+    postdata = {
+        "content": "",
+        "exerpt": "",
+        "status": "pending"
+    }
+    new_post = wp.create_myposttype(data=postdata)
 
     # get metadata for a post
     print "------------- Get Metadata-----------"
